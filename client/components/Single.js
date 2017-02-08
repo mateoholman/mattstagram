@@ -4,9 +4,11 @@ import Photo from './Photo';
 
 const Single = React.createClass({
   render() {
+    const index = this.props.posts.findIndex((post) => post.code === this.props.params.postId);
+    const post = this.props.posts[index];
     return(
       <div>
-        I'm the Single.
+        <Photo index={index} post={post} {...this.props} />
       </div>
     );
   }
