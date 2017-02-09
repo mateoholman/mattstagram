@@ -4,7 +4,7 @@ function posts(state = [], action){
       const index = action.index;
       return [
         ...state.slice(0, index), //before the one to update
-        {...state[index], likes: state[index].likes +1},
+        {...state[index], likes: state[index].likes + 1},
         ...state.slice(index + 1), //after the one to update
       ]
     default :
